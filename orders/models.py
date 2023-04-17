@@ -4,7 +4,7 @@ from django.utils.html import mark_safe
 
 class Product(models.Model):
     name = models.CharField('Назва', max_length=150)
-    image = models.ImageField('Світлина', upload_to='media/image/%Y', null=True)
+    image = models.ImageField('Світлина', upload_to='image/%Y', null=True)
     description = models.TextField('Опис')
     price = models.DecimalField('Ціна', max_digits=7, decimal_places=2, null=True)
     date = models.DateTimeField('Дата', auto_now_add=True)
