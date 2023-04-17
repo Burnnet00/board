@@ -3,16 +3,20 @@
     {% block content %}
     <div class="f1">
         <h1>Головна сторінка</h1>
-        {% for el in bord %}
-            <div class="img">
-                <a href="#"><img src="{{ el.image.url }}" width="200px"></a>
-            </div>
-            <div>
-                <h2>{{ el.name }}</h2>
-                <h3>{{ el.description }}</h3>
-                <p>{{ el.date }}</p>
-            </div>
-        {% endfor %}
+        {% if bord %}
+            {% for el in bord %}
+                <div class="img">
+                    <a href="#"><img src="{{ el.image.url }}" width="200px"></a>
+                </div>
+                <div>
+                    <h2>{{ el.name }}</h2>
+                    <h3>{{ el.description }}</h3>
+                    <p>{{ el.date }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>У вас не має оголошень</p>
+        {% endif %}
     </div>
     {% endblock %}
 

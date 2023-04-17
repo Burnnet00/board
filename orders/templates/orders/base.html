@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="{% static 'orders/css/ord.css' %}">
 </head>
 <body>
+<aside>
+    <h3> Навігація</h3>
+    <ul>
+        <a href="{% url 'home' %}">Головна</a>
+        <a href="{% url 'about' %}">Про нас</a>
+        <a href="#">Добавити</a>
+    </ul>
+
+
+</aside>
+
+<main>
     {% block content %}
-
-
     {% endblock %}
+</main>
 </body>
 </html>
