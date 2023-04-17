@@ -1,5 +1,18 @@
 {% extends 'orders/base.html' %}
 {% block title %}<h1>Головна сторінка</h1>{% endblock %}
     {% block content %}
-    <h1>Головна сторінка</h1>
+    <div class="f1">
+        <h1>Головна сторінка</h1>
+        {% for el in bord %}
+            <div class="img">
+                <a href="#"><img src="{{ el.image.url }}" width="200px"></a>
+            </div>
+            <div>
+                <h2>{{ el.name }}</h2>
+                <h3>{{ el.description }}</h3>
+                <p>{{ el.date }}</p>
+            </div>
+        {% endfor %}
+    </div>
     {% endblock %}
+
