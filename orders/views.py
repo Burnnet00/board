@@ -7,3 +7,6 @@ def home(reguest):
 
 def about(reguest):
     return render(reguest, 'orders/about.html')
+
+def create(request):
+    return render(request, 'orders/create.html')

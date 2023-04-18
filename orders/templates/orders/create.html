@@ -1,0 +1,16 @@
+{% extends 'orders/base.html' %}
+{% block title %}<h1>Додати оголошення</h1>{% endblock %}
+    {% block content %}
+    <div class="f1">
+        <h1>Додати оголошення</h1>
+        <form method="post">
+            <input type="text" placeholder = "Назва"><br>
+            <input form method="post" enctype="multipart/form-data" placeholder = "Світлина"><br>
+            <textarea class="form-control" placeholder = "Опис"></textarea><br>
+            <input type="text" placeholder = "Опис"><br>
+            <input type="text" placeholder = "Ціна"><br>
+            <button class="btn btn-success" type="submit">Додати обяву</button>
+        </form>
+    </div>
+    {% endblock %}
+
