@@ -4,12 +4,13 @@
     <div class="f1">
         <h1>Додати оголошення</h1>
         <form method="post">
-            {% csrf_token %}<br>
+            {% csrf_token %}
             {{ form.name }}<br>
             {{ form.image }}<br>
             {{ form.descriptions }}<br>
             {{ form.price }}<br>
             <span>{{ error }}</span>
+            <button class="btm btm-success" type="submit" >Додати оголошення</button>
         </form>
     </div>
     {% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'orders/base.html' %}
+{% block title %}<h1>Головна сторінка</h1>{% endblock %}
+    {% block content %}
+    <div class="f1">
+        <h1>{% prod.name %}</h1>
+        <p>{% prod.image %}</p>
+        <p>{% prod.description %}</p>
+        <p>{% prod.date %}</p>
+    </div>
+    {% endblock %}
