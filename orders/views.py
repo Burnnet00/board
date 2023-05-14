@@ -1,11 +1,21 @@
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView, UpdateView
+from django.views.generic.edit import FormView
+
 
 from .models import Product
 from .forms import ProductForm
 
+class ProductViews(FormView):
+     form_class = ProductForm
+     template_name = 'orders/create.html'
+     success_url = 'orders/create.html'
+     def form_valid(self, form):
+         form.save()
+         return super(ProductViews, self).form_valid(form)
+
 def home(reguest):
-    bord = Product.objects.order_by('-date')
+    bord = Product.objects.order_by('-date')#order = сортировка по полю (- дата от более новых)
     return render(reguest, 'orders/index.html', {'bord': bord})
 
 class NewDetailView(DetailView):
