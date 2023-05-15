@@ -1,5 +1,5 @@
 from .models import Product
-from django.forms import ModelForm, TextInput, Textarea, FileInput, ImageField, DecimalField
+from django.forms import ModelForm, TextInput, Textarea, FileInput, ImageField, DecimalField, ClearableFileInput
 
 
 class ProductForm(ModelForm):
@@ -11,10 +11,10 @@ class ProductForm(ModelForm):
                 'class': 'form-control',
                 'placeholder': 'Назва'
             }),
-            'image': ImageField(widget=FileInput(attrs={
+            'image': ClearableFileInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Світлина'
-            })),
+            }),
             'description': Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Опис'
