@@ -1,17 +1,14 @@
 {% extends 'orders/base.html' %}
 {% block title %}<h1>Додати оголошення</h1>{% endblock %}
-    {% block content %}
-    <div class="f1">
-        <h1>Додати оголошення</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.name }}<br>
-            {{ form.image }}<br>
-            {{ form.description }}<br>
-            {{ form.price }}<br>
-            <span>{{ error }}</span>
-            <button class="btm btm-success" type="submit" >Додати оголошення</button>
-        </form>
-    </div>
-    {% endblock %}
+{% block content %}
+<div class="f1">
+    <h1>Додати оголошення</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit">Додати оголошення</button>
+
+</div>
+{% endblock %}
 
