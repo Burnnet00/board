@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="{% static 'orders/css/ord.css' %}">
 </head>
 <body>
-<aside>
-    <h3> Навігація</h3>
-    <ul>
-        <a href="{% url 'home' %}"><li>Головна</li></a>
-        <a href="{% url 'about' %}"><li>Про нас</li></a>
-        <a href="{% url 'create' %}"><li><button class="btn btn-info">Додати</button></li></a>
-    </ul>
+<div class="flex">
+    <aside>
+        <h3> Навігація</h3>
+        <ul>
+            <a href="{% url 'home' %}"><li>Головна</li></a>
+            <a href="{% url 'about' %}"><li>Про нас</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-primary">Додати</button></li></a>
+        </ul>
 
+    </aside>
 
-</aside>
-
-<main>
-    {% block content %}
-    {% endblock %}
-</main>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</div>
 </body>
 </html>
