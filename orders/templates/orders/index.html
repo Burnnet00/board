@@ -2,7 +2,9 @@
 {% block title %}<h1>Головна сторінка</h1>{% endblock %}
     {% block content %}
     <div class="f1">
-        <h1>Головна сторінка</h1>
+        <h1 class="text-center">Головна сторінка</h1>
+        <br>
+        <br>
         {% if bord %}
             {% for el in bord %}
                 <div class="img">
@@ -12,6 +14,7 @@
                     <h2>{{ el.name }}</h2>
                     <h3>{{ el.description }}</h3>
                     <p>{{ el.date }}</p>
+                    <p>{{ el.price }}</p>
                 </div>
             {% endfor %}
         {% else %}

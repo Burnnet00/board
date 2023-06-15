@@ -1,5 +1,5 @@
 from .models import Product
-from django.forms import ModelForm, TextInput, Textarea, FileInput, ImageField, NumberInput, ClearableFileInput
+from django.forms import ModelForm, TextInput, Textarea, NumberInput, ClearableFileInput
 
 
 class ProductForm(ModelForm):

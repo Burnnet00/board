@@ -10,12 +10,18 @@
 <body>
 <div class="flex">
     <aside>
-        <h3> Навігація</h3>
+        <h3 class="text-center"> Навігація</h3>
         <ul>
             <a href="{% url 'home' %}"><li>Головна</li></a>
+            {% if user.is_authenticated %}
+            <li><a href="/admin/">Адмін панель</a></li>
+            {% else %}
+            <li><a href="/admin/logout/">Увійти</a></li>
+            {% endif %}
             <a href="{% url 'about' %}"><li>Про нас</li></a>
-            <a href="{% url 'create' %}"><li><button class="btn btn-primary">Додати</button></li></a>
         </ul>
+
+            <a href="{% url 'create' %}"><li><button class="btn btn-primary">Додати</button></li></a>
 
     </aside>
 
