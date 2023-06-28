@@ -2,7 +2,8 @@
 {% block title %}<h1>Додати оголошення</h1>{% endblock %}
 {% block content %}
 <div class="f1">
-    <h1 class="text-center">Додати оголошення</h1>
+    <div class="text-center"><h1>Додати оголошення</h1></div>
+
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
